@@ -21,8 +21,8 @@ If you're feeling adventurous and want to join me on this journey:
    ```bash
    git clone https://github.com/your-username/dotfiles.git ~/.dotfiles
    
-2. **Create symbolic links** Let's link these configurations to their rightful places:
+2. **Create symbolic links using stow** Let's link these configurations to their rightful places. Head to .dotfiles directory and run:
    ```bash
-   ln -s ~/.dotfiles/ ~/.config
+   stow .
 
 That's all, folks. Thanks for stopping by.
