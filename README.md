@@ -1,4 +1,4 @@
-# ☕️ .files | Arch | Hyprland | Neovim | Kitty | Tmux
+# ☕️ .Files | Arch | Hyprland | Neovim | Kitty | Tmux
 
 Hey there! 👋 This is a collection of my personal dotfiles. here is where I fine-tune and tweak my Unix-like environment to suit my whims and fancies.
 
