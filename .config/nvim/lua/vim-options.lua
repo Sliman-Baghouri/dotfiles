@@ -9,8 +9,8 @@ vim.cmd("set encoding=utf-8")
 vim.cmd("set arabicshape")
 vim.cmd("set termbidi")
 vim.cmd("set guifont=JetBrainsMono\\ Nerd\\ Font\\ Mono:h10")
-vim.opt.nu = false
-vim.opt.rnu = false
+vim.opt.nu = true
+vim.opt.rnu = true
 
 -- Enable auto indenting and set it to spaces
 vim.opt.smartindent = true
