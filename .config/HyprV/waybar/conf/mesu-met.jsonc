@@ -1,6 +1,6 @@
 {
     "clock": {
-        "format": "{:%H:%M  %A, %B %e}",
+        "format": "{:%H:%M  %a, %b %e}",
         "tooltip-format": "{: %A, %e %B %Y}"
     },
 
