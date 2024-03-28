@@ -3,3 +3,11 @@ google-chrome/
 chromium/
 gh/
 github-copilot
+.bash_history
+.bash_logout
+.bash_profile
+.bash_profile.save
+.bash_profile.save.1
+.emulator_console_auth_token
+.flutter
+.viminfo
