@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/mailto=chromium.desktop
+text/plain=nvim.desktop
+
+[Added Associations]
+text/plain=vim.desktop;nvim.desktop;

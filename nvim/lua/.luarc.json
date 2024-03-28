@@ -1,0 +1,21 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "⠀⢀⣠⠄⠀⠀⠀⠀⠀⠈⠛⠞⠛⣳⣾⡏⠈⢸⣿⣿⡇⣿⡀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⣨⡞⠁⠀⣿⣿⣿⣿⣿⣷⠁⠶⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+        "�⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
+        "set_lsp_config",
+        "dap",
+        "builtin",
+        "header",
+        "on_colors",
+        "style",
+        "flash_keymaps",
+        "keymaps"
+    ],
+    "diagnostics.disable": [
+        "undefined-doc-name",
+        "unused-local",
+        "lowercase-global",
+        "trailing-space"
+    ]
+}
