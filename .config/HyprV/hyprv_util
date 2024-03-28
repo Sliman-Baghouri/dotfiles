@@ -92,21 +92,21 @@ switch_version() {
         
     esac
     #set the waybar config
-    ln -sf ~/.config/HyprV/waybar/conf/$VERTO'config.jsonc' ~/.config/waybar/config.jsonc
+    ln -sf ~/.config/HyprV/waybar/conf/'v2-config.jsonc' ~/.config/waybar/config.jsonc
     #set the waybar theme
-    ln -sf ~/.config/HyprV/waybar/style/$VERTO'style'$SWITCHTO.css ~/.config/waybar/style.css
+    ln -sf ~/.config/HyprV/waybar/style/'v2-style'$SWITCHTO.css ~/.config/waybar/style.css
     #set the wofi theme
-    ln -sf ~/.config/HyprV/wofi/style/$VERTO'style'$SWITCHTO.css ~/.config/wofi/style.css
+    ln -sf ~/.config/HyprV/wofi/style/'v2-style'$SWITCHTO.css ~/.config/wofi/style.css
 
     #set the background
     if [ -z $SET_BG ]; then
-        swww img ~/.config/HyprV/backgrounds/$VERTO'background'$SWITCHTO.jpg --transition-fps 60 --transition-type wipe --transition-duration 2
+        swww img ~/.config/HyprV/backgrounds/'v2-background'$SWITCHTO.jpg --transition-fps 60 --transition-type wipe --transition-duration 2
     else
         swww img $SET_BG --transition-fps 60 --transition-type wipe --transition-duration 2
     fi
 
     #update the sddm image
-    cp -f ~/.config/HyprV/backgrounds/$VERTO'background'$SWITCHTO.jpg /usr/share/sddm/themes/sdt/wallpaper.jpg
+    cp -f ~/.config/HyprV/backgrounds/'v2-background'$SWITCHTO.jpg /usr/share/sddm/themes/sdt/wallpaper.jpg
 
 }
 

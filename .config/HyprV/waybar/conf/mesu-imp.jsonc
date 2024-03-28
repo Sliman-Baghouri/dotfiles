@@ -1,7 +1,7 @@
 {
     "clock": {
-        "format": "{:%H:%M}",
-        "tooltip-format": "{: %A, %e %B %Y}"
+        "format": "{:%I:%M%p}",
+        "tooltip-format": "{: %A, %B %e %Y}"
     },
 
     "custom/weather": {
@@ -9,7 +9,7 @@
         "tooltip" : true,
         "format" : "{}",
         "interval" : 30,
-        "exec" : "~/.config/HyprV/waybar/scripts/waybar-wttr-c.py",
+        "exec" : "~/.config/HyprV/waybar/scripts/waybar-wttr.py",
         "return-type" : "json"
     },
 
@@ -17,9 +17,9 @@
         "thermal-zone": 1,
         "format": "",
         "format-alt-click": "click-right",
-        "format-alt": " {temperatureC}°C",
+        "format-alt": " {temperatureF}°F",
         "critical-threshold": 70,
-        "format-critical": " {temperatureC}°C",
+        "format-critical": " {temperatureF}°F",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     }
 }

@@ -1,0 +1,147 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+Maybe you should try dusting your PC in the meantime?
+
+Hyprland received signal 11 (Segmentation fault)
+
+Version: d74607e414dcd16911089a6d4b6aeb661c880923
+Tag: v0.33.1
+
+System info:
+	System name: Linux
+	Node name: rodya
+	Release: 6.6.9-arch1-1
+	Version: #1 SMP PREEMPT_DYNAMIC Tue, 02 Jan 2024 02:28:28 +0000
+
+GPU:
+	00:02.0 VGA compatible controller [0300]: Intel Corporation HD Graphics 620 [8086:5916] (rev 02) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://bugs.archlinux.org/"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x562d2c037b92]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x4f4) [0x562d2c006924]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x47) [0x562d2bf81df7]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f6c1e25c710]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x15aedd) [0x7f6c1e378edd]
+		??
+		??:0
+	#5 | Hyprland(+0xe3e74) [0x562d2bfb7e74]
+		??
+		??:0
+	#6 | Hyprland(+0x20a0bf) [0x562d2c0de0bf]
+		??
+		??:0
+	#7 | Hyprland(+0xabc9a) [0x562d2bf7fc9a]
+		??
+		??:0
+	#8 | Hyprland(_ZN13CInputManager21applyConfigToKeyboardEP9SKeyboard+0x911) [0x562d2c079c81]
+		??
+		??:0
+	#9 | Hyprland(_ZN13CInputManager11newKeyboardEP16wlr_input_device+0x54d) [0x562d2c07b0bd]
+		??
+		??:0
+	#10 | Hyprland(_ZN6Events17listener_newInputEP11wl_listenerPv+0x137) [0x562d2c01c457]
+		??
+		??:0
+	#11 | /usr/lib/libwayland-server.so.0(wl_signal_emit_mutable+0x7e) [0x7f6c1ec0e01e]
+		??
+		??:0
+	#12 | /usr/lib/libwayland-server.so.0(wl_signal_emit_mutable+0x7e) [0x7f6c1ec0e01e]
+		??
+		??:0
+	#13 | /usr/lib/libwlroots.so.13032(+0x507ec) [0x7f6c1eca77ec]
+		??
+		??:0
+	#14 | /usr/lib/libwlroots.so.13032(+0x50aa0) [0x7f6c1eca7aa0]
+		??
+		??:0
+	#15 | /usr/lib/libwlroots.so.13032(+0x54dd6) [0x7f6c1ecabdd6]
+		??
+		??:0
+	#16 | Hyprland(_ZN11CCompositor15startCompositorEv+0x58e) [0x562d2bf8307e]
+		??
+		??:0
+	#17 | Hyprland(main+0xa89) [0x562d2bf6b009]
+		??
+		??:0
+	#18 | /usr/lib/libc.so.6(+0x27cd0) [0x7f6c1e245cd0]
+		??
+		??:0
+	#19 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7f6c1e245d8a]
+		??
+		??:0
+	#20 | Hyprland(_start+0x25) [0x562d2bf7f035]
+		??
+		??:0
+
+
+Log tail:
+798 -> 562d2c156420 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e9e36e0: 562d2e9e37d8 -> 562d2c156400 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e9e36e0: 562d2e9e37c8 -> 562d2c1563e0 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e9e36e0: 562d2e9e37e8 -> 562d2c1563c0 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e9e36e0: 562d2e9e3808 -> 562d2c1563a0 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e9e36e0: 562d2e9e37a8 -> 562d2c156380 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e9e36e0: 562d2e9e37b8 -> 562d2c156360 (owner: WLRCursor)
+[LOG] Registered signal for owner 562d2e135ee0: 562d2e135ef8 -> 562d2c156340 (owner: Backend)
+[LOG] Registered signal for owner 562d2e11c898: 562d2e9f6418 -> 562d2c156320 (owner: Seat)
+[LOG] Registered signal for owner 562d2e11c898: 562d2e9f6428 -> 562d2c156300 (owner: Seat)
+[LOG] Registered signal for owner 562d2e11c898: 562d2e9f6468 -> 562d2c1562e0 (owner: Seat)
+[LOG] Registered signal for owner 562d2e11c898: 562d2e9f6478 -> 562d2c1562c0 (owner: Seat)
+[LOG] Registered signal for owner 562d2e11c898: 562d2e9f6428 -> 562d2c156300 (owner: Seat)
+[LOG] Registered signal for owner 562d2e11c898: 562d2e9f6448 -> 562d2c1562a0 (owner: Seat)
+[LOG] Registered signal for owner 562d2e9f6680: 562d2e9f66a0 -> 562d2c156280 (owner: LayerShell)
+[LOG] Registered signal for owner 562d2e9e34d0: 562d2e9e34f8 -> 562d2c156260 (owner: OutputLayout)
+[LOG] Registered signal for owner 562d2e9d9900: 562d2e9d9938 -> 562d2c156240 (owner: OutputMgr)
+[LOG] Registered signal for owner 562d2e9d9900: 562d2e9d9948 -> 562d2c156220 (owner: OutputMgr)
+[LOG] Registered signal for owner 562d2e9f69a0: 562d2e9f69b8 -> 562d2c156200 (owner: PointerConstraints)
+[LOG] Registered signal for owner 562d2e9f67f0: 562d2e9f6820 -> 562d2c1561e0 (owner: XDGDecoMgr)
+[LOG] Registered signal for owner 562d2ea13620: 562d2ea13650 -> 562d2c1561c0 (owner: VirtPtrMgr)
+[LOG] Registered signal for owner 562d2ea13570: 562d2ea135a0 -> 562d2c1561a0 (owner: VKeyboardMgr)
+[LOG] Registered signal for owner 562d2e2143e0: 562d2e2143e0 -> 562d2c156180 (owner: WLRRenderer)
+[LOG] Registered signal for owner 562d2ea139b0: 562d2ea139e0 -> 562d2c156160 (owner: WLRIdleInhibitMgr)
+[LOG] Registered signal for owner 562d2e9e3540: 562d2e9e3570 -> 562d2c156140 (owner: PowerMgr)
+[LOG] Registered signal for owner 562d2ea13e30: 562d2ea13e60 -> 562d2c156120 (owner: IMEMgr)
+[LOG] Registered signal for owner 562d2ea13d80: 562d2ea13db0 -> 562d2c156100 (owner: TextInputMgr)
+[LOG] Registered signal for owner 562d2ea13ee0: 562d2ea13f08 -> 562d2c1560e0 (owner: ActivationV1)
+[LOG] Registered signal for owner 562d2ea14030: 562d2ea14038 -> 562d2c1560c0 (owner: SessionLockMgr)
+[LOG] Registered signal for owner 562d2e9e3420: 562d2e9e3460 -> 562d2c1560a0 (owner: GammaCtrlMgr)
+[LOG] Registered signal for owner 562d2ea140d0: 562d2ea140d8 -> 562d2c156080 (owner: CursorShapeMgr)
+[LOG] Registered signal for owner 562d2ea14170: 562d2ea141a0 -> 562d2c156060 (owner: TearingControlMgr)
+[LOG] Registered signal for owner 562d2e11c600: 562d2ea137c0 -> 562d2c156040 (owner: DRM)
+[LOG] Registered signal for owner 562d2e135f70: 562d2e1360d0 -> 562d2c156020 (owner: Session)
+[LOG] wl_display_add_socket for wayland-1 succeeded with 0
+[LOG] Running on WAYLAND_DISPLAY: wayland-1
+[LOG] Attached a keyboard with name Power Button
+[LOG] Registered signal for owner 562d2eb97de0: 562d2eb43940 -> 562d2eb97de8 (owner: Keyboard)
+[LOG] Registered signal for owner 562d2eb97de0: 562d2eb43930 -> 562d2eb97e50 (owner: Keyboard)
+[LOG] Registered signal for owner 562d2eb97de0: 562d2eb43810 -> 562d2eb97f20 (owner: Keyboard)
+[LOG] Registered signal for owner 562d2eb97de0: 562d2eb43950 -> 562d2eb97eb8 (owner: Keyboard)
+[LOG] ApplyConfigToKeyboard for "power-button", hasconfig: 0
+[LOG] Attempting to create a keymap for layout fr,en with variant  (rules: , model: , options: grp:caps_toggle)
+[ERR] Keyboard layout fr,en with variant  (rules: , model: , options: grp:caps_toggle) couldn't have been loaded.
+[LOG] [hookSystem] New hook event registered: activeLayout
