@@ -1,0 +1,14 @@
+[pyprland]
+plugins = ["scratchpads"]
+
+
+[scratchpads.term]
+animation = ""
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+position = "20% 20%"
+size = "55% 55%"
+
+[scratchpads.mobile]
+command = "scrcpy"
+class = "mobile-dropdown"

@@ -10,7 +10,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
-alias hyprconf='nvim .dotfiles/hypr/hyprland.conf'
+alias hyprconf='nvim .dotfiles/.config/hypr/hyprland.conf'
 alias rc='nvim .bashrc'
 export PATH="$PATH:/path/to/flutter/bin"
 export PATH="$PATH:/home/rodya/Downloads/flutter/bin"
