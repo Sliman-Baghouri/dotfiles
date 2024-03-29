@@ -14,7 +14,7 @@ Inside this digital treasure chest, you'll find a mishmash of configurations, a 
 
 ## Usage
 
-If you're feeling adventurous and want to join me on this journey:
+If you're feeling adventurous:
 
 1. **Clone the Repository** Fire up your terminal and let's get this show on the road:
 
