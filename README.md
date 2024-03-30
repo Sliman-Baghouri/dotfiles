@@ -1,4 +1,4 @@
-# ☕️ .Files | Arch | Hyprland | Neovim | Kitty | Tmux
+# ☕️ .Files | Arch | Hyprland | Neovim | Kitty
 
 Hey there! 👋 This is a collection of my personal dotfiles. here is where I fine-tune and tweak my Unix-like environment to suit my whims and fancies.
 
@@ -9,8 +9,6 @@ Inside this digital treasure chest, you'll find a mishmash of configurations, a 
 - **.dotfiles/**: Where the party starts. Dive in and explore the settings for all sorts of applications and tools.
 - **.bashrc**: My trusty sidekick, guiding me through the maze of the Bash shell with its clever little tricks.
 - **.nvim**: The maestro orchestrating the Vim text editor, ensuring every keystroke feels like a stroke of genius.
-- **.gitconfig**: My wingman in the world of Git, keeping my commits in line and my branches in check.
-- **.tmux.conf**: The conductor of my terminal symphony, bringing order to the chaos with its splits and panes.
 
 ## Usage
 
