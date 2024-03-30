@@ -2,9 +2,11 @@ Google/
 google-chrome/
 chromium/
 gh/
+obsidian/
 .hyprland/
 github-copilot
 .bash_history
+.gitconfig
 .bash_logout
 .bash_profile
 .bash_profile.save
