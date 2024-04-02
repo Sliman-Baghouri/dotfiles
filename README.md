@@ -1,6 +1,8 @@
-# ☕️ .Files | Arch | Hyprland | Neovim | Kitty
+# Starshower .Files | Arch | Hyprland | Neovim | Kitty
 
 Hey there! 👋 This is a collection of my personal dotfiles. here is where I fine-tune and tweak my Unix-like environment to suit my whims and fancies.
+
+![Example Image](https://raw.githubusercontent.com/Sliman-Baghouri/dotfiles/main/.config/HyprV/backgrounds/currentBG/v2-background-dark%20(copy%202).jpg)
 
 ## Contents
 
@@ -24,3 +26,5 @@ If you're feeling adventurous:
    stow .
 
 That's all, folks. Thanks for stopping by.
+
+
