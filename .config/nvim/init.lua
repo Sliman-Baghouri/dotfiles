@@ -14,6 +14,11 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+local optx = { noremap = true, silent = true }  
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<esc>", ":noh<cr>", optx)  
+
 vim.wo.number = true
 local opts = {}
 
