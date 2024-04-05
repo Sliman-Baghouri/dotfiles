@@ -8,6 +8,11 @@
     <Directory>chrome-apps.directory</Directory>
     <Include>
         <Filename>chrome-dhhcjobibafgcfcpmifgcpmngaokjpll-Default.desktop</Filename>
+        <Filename>chrome-pechjdifhcbnfhfniohpmdnaomgeccca-Default.desktop</Filename>
+        <Filename>chrome-lcgcejblknioopnjibcgdknnffpcfdke-Default.desktop</Filename>
+        <Filename>chrome-lkbebapbmgimlopkkmebgnjcfijdbkll-Default.desktop</Filename>
+        <Filename>chrome-pdblaehbpalhkncehapjcegeogblkjdf-Default.desktop</Filename>
+        <Filename>chrome-fklnhlgfamfeknafaldenkmoeccpkmmf-Default.desktop</Filename>
     </Include>
 </Menu>
 </Menu>
