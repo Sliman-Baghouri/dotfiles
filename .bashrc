@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
 alias hyprconf='nvim ~/.dotfiles/.config/hypr/hyprland.conf'
+alias vimrc='cd ~/.dotfiles/.config/nvim'
 alias rc='nvim .bashrc'
 export PATH="$PATH:/path/to/flutter/bin"
 export PATH="$PATH:/home/rodya/Downloads/flutter/bin"

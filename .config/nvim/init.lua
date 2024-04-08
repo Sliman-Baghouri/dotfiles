@@ -1,6 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -14,10 +13,12 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local optx = { noremap = true, silent = true }  
 local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<esc>", ":noh<cr>", optx)  
+keymap("n", "<esc>", ":noh<cr>", {
+  noremap = true,
+  silent = true
+})  
 
 vim.wo.number = true
 local opts = {}
@@ -34,7 +35,7 @@ vim.keymap.set("i", "<C-CR>", "<c-o>o")
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
 -- Lua
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("tokyonight-night")
 
 require("rotate_window")
 
@@ -47,9 +48,6 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 		signs = not vt,
 	}
 end, { desc = "toggle diagnostic" })
-
-
-
 
 
 vim.g.nonels_suppress_issue58 = true
