@@ -2,8 +2,8 @@ return {
   "folke/tokyonight.nvim",
   priority = 1000,
   config = function()
-    local bg = "#011423"
-    local bg_dark = "#011423"
+    local bg = "#000000"
+    local bg_dark = "#000000"
     local bg_highlight = "#143652"
     local bg_search = "#0A64AC"
     local bg_visual = "#275378"

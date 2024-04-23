@@ -10,7 +10,9 @@ position = "20% 20%"
 size = "55% 55%"
 lazy = true 
 
+
 [scratchpads.mobile]
 command = "scrcpy"
 class = "mobile-dropdown"
 lazy = true 
+

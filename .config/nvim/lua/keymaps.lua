@@ -6,7 +6,6 @@ local xnoremap = require("utils").xnoremap
 --
 
 local M = {}
-local TERM = os.getenv("TERM")
 
 local TERM = os.getenv("TERM")
 
