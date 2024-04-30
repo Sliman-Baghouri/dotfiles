@@ -5,7 +5,6 @@ local tnoremap = require("utils").tnoremap
 local xnoremap = require("utils").xnoremap
 --
 
-local M = {}
 
 local TERM = os.getenv("TERM")
 
@@ -144,6 +143,8 @@ keymaps.flash = function()
   }
 end
 
+-- keymaps for flutter-tools plugin
+
 -- keymas for harpoon plugin
 
 -- keymaps for lsp-config plugin
@@ -179,10 +180,10 @@ vim.api.nvim_set_keymap("n", "<Leader>v", ":vsp<CR>", { noremap = true, silent =
 vim.api.nvim_set_keymap("n", "<Leader>q", ":q<CR>", { noremap = true, silent = true })
 
 -- Map Tab to :bnext
-vim.api.nvim_set_keymap("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
 
 -- Map Shift + Tab to :bprev
-vim.api.nvim_set_keymap("n", "<S-Tab>", ":bprev<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<S-Tab>", ":bprev<CR>", { noremap = true, silent = true })
 
 tnoremap("<space>", "<space>")
 

@@ -28,7 +28,11 @@ require("lazy").setup("plugins")
 
 require("settings")
 require("keymaps")
+F = require("flutter-util")
+-- flutter-tool for toggling dev logs
+vim.api.nvim_set_keymap('n', '<Tab>', ':lua F.toggle_log()<CR>', { noremap = true, silent = true })
 
+-- Assuming the function is in utils.lua (modify if it's in init.lua)
 vim.keymap.set("i", "<C-CR>", "<c-o>o")
 
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
@@ -75,5 +79,6 @@ require("telescope").setup({
     },
   },
 })
+
 
 vim.g.nonels_suppress_issue58 = true

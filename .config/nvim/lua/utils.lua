@@ -1,4 +1,5 @@
 local M = {}
+local api = vim.api  -- Import the api module from Neovim
 
 local function bind(op, outer_opts)
 	outer_opts = vim.tbl_extend("force", { noremap = true, silent = true }, outer_opts or {})
