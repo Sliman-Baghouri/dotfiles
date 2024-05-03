@@ -29,7 +29,7 @@ vim.opt.hlsearch = true
 vim.opt.wrap = false 
 
 
--- Better splitting
+-- etter splitting
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
