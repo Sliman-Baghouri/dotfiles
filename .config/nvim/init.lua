@@ -38,7 +38,8 @@ vim.keymap.set("i", "<C-CR>", "<c-o>o")
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 -- Lua
 -- vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
-vim.cmd.colorscheme("tokyonight-night")
+-- vim.cmd.colorscheme("catppuccin");
+vim.cmd.colorscheme("catppuccin")
 
 require("rotate_window")
 
