@@ -9,7 +9,17 @@ return {
   config = function()
     local configs = require("nvim-treesitter.configs")
     configs.setup({
-      ensure_installed = { "c", "lua", "vim", "dart", "vimdoc", "query", "heex", "javascript", "html" },
+      ensure_installed = { "c", "lua", "vim", "dart", "vimdoc", "query", "heex", "javascript", "html", "tsx" },
+      config = {
+         javascript = {
+          __default = '// %s',
+          jsx_element = '{/* %s */}',
+          jsx_fragment = '{/* %s */}',
+          jsx_attribute = '// %s',
+          comment = '// %s',
+       },
+        typescript = { __default = '// %s', __multiline = '/* %s */' },
+      },
       sync_install = false,
       highlight = { enable = true },
       indent = {
