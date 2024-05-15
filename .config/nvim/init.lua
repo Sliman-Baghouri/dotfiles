@@ -21,7 +21,6 @@ keymap("n", "<esc>", ":noh<cr>", {
 })
 
 vim.wo.number = true
-local opts = {}
 
 require("vim-options")
 require("lazy").setup("plugins")
@@ -39,7 +38,7 @@ vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true 
 -- Lua
 -- vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 -- vim.cmd.colorscheme("catppuccin");
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("mellow")
 
 require("rotate_window")
 

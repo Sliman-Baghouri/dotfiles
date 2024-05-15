@@ -1,3 +1,3 @@
 return {
-    "mellow-theme/mellow.nvim",
+"Sliman-Baghouri/mellow.nvim"
 }
