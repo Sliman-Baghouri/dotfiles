@@ -38,7 +38,7 @@ vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true 
 -- Lua
 -- vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 -- vim.cmd.colorscheme("catppuccin");
-vim.cmd.colorscheme("mellow")
+vim.cmd.colorscheme("catppuccin")
 
 require("rotate_window")
 
