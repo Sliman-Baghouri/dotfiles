@@ -31,7 +31,7 @@ prompt_comment() {
 # PS1="\[\e[01;37m\]{ \[\e[01;34m\]\w \[\e[01;37m\]} \[\e[01;35m\]\[\$ \]\[\e[01;37m\]"
 # PS1="\[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty)\[\033[00m\]\n\w\[\e[1;31m\] \[\e[1;36m\]\[\e[1;37m\] "
 # PS1="\[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty)\n\[\033[1;33m\]  \[\e[1;37m\] \w \[\e[1;36m\]\[\e[1;37m\] "
-PS1="\[\033[34m\] \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty) \[\e[1;36m\]\[\e[1;37m\] "
+PS1="\[\033[34m\]⮝ \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty) \[\e[1;36m\]\[\e[1;37m\] "
 
 # PS1="\[\033[34m\]⮝ \[\e[1;37m\] \$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty) \[\e[1;36m\]>\[\e[1;37m\] "
 # If not running interactively, don't do anything
