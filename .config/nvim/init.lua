@@ -21,7 +21,10 @@ keymap("n", "<esc>", ":noh<cr>", {
 })
 
 vim.wo.number = true
-
+-- deno
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
 require("vim-options")
 require("lazy").setup("plugins")
 

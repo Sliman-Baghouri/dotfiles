@@ -22,18 +22,51 @@ return {
       local lspconfigKeymaps = require("keymaps").lsp_config
 
       local lspconfig = require("lspconfig")
-			lspconfig.tsserver.setup({
-				on_attach = function(client)
-					if client.config.flags then
-						client.config.flags.allow_incremental_sync = true
-					end
-					client.resolved_capabilities.document_formatting = false
-					set_lsp_config(client)
-				end,
-        })
 
-			--lspconfig.tsserver.setup({
-			--capabilities = capabilities,
+        lspconfig.denols.setup {
+          on_attach = on_attach,
+          root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+        }
+
+        lspconfig.tsserver.setup {
+          on_attach = on_attach,
+          root_dir = lspconfig.util.root_pattern("package.json"),
+          single_file_support = false
+        }
+      -- lspconfig.denols.setup {
+      --   on_attach = function(client)
+      --     client.resolved_capabilities.document_formatting = false
+      --     client.resolved_capabilities.document_range_formatting = false
+      --     set_lsp_config(client)
+      --   end,
+      --   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+      -- }
+
+
+      -- lspconfig.tsserver.setup {
+      --   on_attach = function(client)
+      --     if client.config.flags then
+      --       client.config.flags.allow_incremental_sync = true
+      --     end
+      --     client.resolved_capabilities.document_formatting = false
+      --     set_lsp_config(client)
+      --   end,
+      --   root_dir = lspconfig.util.root_pattern("package.json"),
+      --   single_file_support = false
+      -- }
+
+			-- lspconfig.tsserver.setup({
+			-- 	on_attach = function(client)
+			-- 		if client.config.flags then
+			-- 			client.config.flags.allow_incremental_sync = true
+			-- 		end
+			-- 		client.resolved_capabilities.document_formatting = false
+			-- 		set_lsp_config(client)
+			-- 	end,
+   --      })
+
+			-- lspconfig.tsserver.setup({
+			-- capabilities = capabilities,
 			-- })
 			lspconfig.html.setup({
 				capabilities = capabilities,
