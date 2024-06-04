@@ -1,6 +1,8 @@
 [pyprland]
-plugins = ["scratchpads"]
+plugins = ["scratchpads", "expose"]
 
+[expose]
+include_special = false
 
 [scratchpads.term]
 animation = ""
