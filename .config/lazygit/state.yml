@@ -1,11 +1,12 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/rodya/dev/t1/moonstep
+    - /home/rodya/dev/t1/moonstep
+    - /home/rodya/.dotfiles
 startuppopupversion: 5
-lastversion: 0.41.0
+lastversion: 0.42.0
 customcommandshistory:
-- q
-- :q
+    - q
+    - :q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
 diffcontextsize: 3
