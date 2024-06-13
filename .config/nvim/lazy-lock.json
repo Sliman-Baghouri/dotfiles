@@ -4,7 +4,6 @@
   "catppuccin": { "branch": "main", "commit": "5215ea59df6d0a7e27da9a5cd1165e06d1b04cbe" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
-  "coc.nvim": { "branch": "master", "commit": "c0545734819f84f034f8bd759f3e66ccb2f72baa" },
   "copilot.vim": { "branch": "release", "commit": "1dcaf72099b436b5832d6117d9cd7a4a098a8d77" },
   "flash.nvim": { "branch": "main", "commit": "43f67935d388fbb540f8b40e8cbfd80de54f978a" },
   "flutter-tools.nvim": { "branch": "main", "commit": "80f8a42c75f626b34399f8514b45632a6a292bce" },
