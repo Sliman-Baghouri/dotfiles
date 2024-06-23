@@ -8,7 +8,7 @@ return  {
     },
    config = function()
     
-    vim.keymap.set('n', '<C-t>', '::Neotree toggle<CR>', {})
+    -- vim.keymap.set('n', '<C-t>', '::Neotree toggle<CR>', {})
     -- vim.keymap.set('n', '<M-e>', '::Neotree source=filesystem focus<CR>', {})
     end
   }

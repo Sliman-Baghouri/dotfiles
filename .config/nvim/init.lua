@@ -21,6 +21,9 @@ keymap("n", "<esc>", ":noh<cr>", {
 })
 
 vim.wo.number = true
+
+vim.api.nvim_set_keymap('n', '<C-t>', ':Telescope neoclip<CR>', { noremap = true, silent = true })
+
 -- deno
 vim.g.markdown_fenced_languages = {
   "ts=typescript"
