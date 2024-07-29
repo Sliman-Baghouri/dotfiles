@@ -9,7 +9,23 @@ return {
   config = function()
     local configs = require("nvim-treesitter.configs")
     configs.setup({
-      ensure_installed = { "c", "lua", "vim", "dart", "vimdoc", "query", "heex", "javascript", "html", "tsx" },
+      ensure_installed = {
+        "c",
+        "lua",
+        "vim",
+        "json",
+        "http",
+        "sql",
+        "css",
+        "scss",
+        "dart",
+        "vimdoc",
+        "query",
+        "heex",
+        "javascript",
+        "html",
+        "tsx"
+      },
       config = {
          javascript = {
           __default = '// %s',

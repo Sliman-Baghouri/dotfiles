@@ -2,10 +2,10 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.opt.guicursor = "";
 vim.g.mapleader = " "
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true, silent = true })
-
 vim.cmd("set pumblend=15")
 vim.cmd("set encoding=utf-8")
 vim.cmd("set arabicshape")

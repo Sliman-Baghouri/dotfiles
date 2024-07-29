@@ -13,8 +13,10 @@ return {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
-      require("luasnip.loaders.from_vscode").lazy_load()
 
+
+
+     require("luasnip/loaders/from_vscode").lazy_load()
       vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#111111" })
 
       cmp.setup({

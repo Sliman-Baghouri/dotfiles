@@ -23,8 +23,9 @@ keymap("n", "<esc>", ":noh<cr>", {
 vim.wo.number = true
 
 vim.api.nvim_set_keymap('n', '<C-t>', ':Telescope neoclip<CR>', { noremap = true, silent = true })
-
+-- vim.o.background = "light";
 -- deno
+--
 vim.g.markdown_fenced_languages = {
   "ts=typescript"
 }
@@ -43,8 +44,13 @@ vim.keymap.set("i", "<C-CR>", "<c-o>o")
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 -- Lua
 -- vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
+
 -- vim.cmd.colorscheme("catppuccin");
-vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("alabaster")
+-- vim.cmd.colorscheme('cold')
+vim.cmd.colorscheme("cold");
+-- vim.cmd.colorscheme("plan9")
+
 
 require("rotate_window")
 
@@ -58,33 +64,8 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
   })
 end, { desc = "toggle diagnostic" })
 
-require("telescope").setup({
-
-  defaults = {
-    file_ignore_patterns = {
-      -- ignore dotnet generated folders in the file search
-      "^bin/",
-      "^obj/",
-      "bin",
-      "/obj/",
-      "/^node_modules/",
-      "/node_modules/",
-      "ios",
-      "assets",
-      "/^.lock/",
-      ".lock",
-      -- ignore .git folders (usefull when using hidden=true option)
-      "^.git/",
-      ".git",
-    },
-  },
-
-  extensions = {
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown({}),
-    },
-  },
-})
 
 
 vim.g.nonels_suppress_issue58 = true
+
+
