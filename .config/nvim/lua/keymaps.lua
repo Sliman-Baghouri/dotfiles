@@ -166,5 +166,7 @@ vim.api.nvim_set_keymap("n", "<Leader>q", ":q<CR>", { noremap = true, silent = t
 
 tnoremap("<space>", "<space>")
 
+vim.api.nvim_set_keymap('n', 'md', ':MarkdownPreview<CR>', { noremap = true, silent = true })
+
 
 return keymaps
