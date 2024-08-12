@@ -1,7 +1,6 @@
 #
 # ~/.bashrc
 #
-
 function parse_git_dirty {
   STATUS="$(git status 2> /dev/null)"
   if [[ $? -ne 0 ]]; then printf ""; return; else printf " ["; fi
@@ -37,11 +36,15 @@ PS1="\[\033[34m\]⮝ \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
+alias ls='lsd'
 alias grep='grep --color=auto'
 alias hyprconf='nvim ~/.dotfiles/.config/hypr/hyprland.conf'
+alias downtime='~/.dotfiles/.config/scripts/downtime.sh'
+alias notes='nvim ~/notes/moonstep/apps/users/backlogs.md'
 alias vimrc='cd ~/.dotfiles/.config/nvim'
 alias rc='nvim .bashrc'
+alias grenade='~/dev/go/grenade/grenade'
 export PATH="$PATH:/path/to/flutter/bin"
 export PATH="$PATH:/home/rodya/Downloads/flutter/bin"
 export CHROME_EXECUTABLE="/usr/bin/chromium"
@@ -65,3 +68,5 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+

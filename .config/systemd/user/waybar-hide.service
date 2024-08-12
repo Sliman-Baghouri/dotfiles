@@ -1,0 +1,11 @@
+[Unit]
+Description=Waybar Hide on Special Workspace
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/home/rodya/.dotfiles/scripts/waybar.sh
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target
+
