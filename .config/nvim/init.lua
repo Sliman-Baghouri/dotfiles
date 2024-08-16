@@ -49,6 +49,7 @@ vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true 
 -- vim.cmd.colorscheme("alabaster")
 -- vim.cmd.colorscheme('cold')
 vim.cmd.colorscheme("cold");
+
 -- vim.cmd.colorscheme("plan9")
 
 

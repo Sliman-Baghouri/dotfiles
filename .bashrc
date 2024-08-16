@@ -53,6 +53,9 @@ export DENO_INSTALL="/home/rodya/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 alias vi='nvim'
 export ANDROID_HOME=$HOME/Android/Sdk
+export JAVA_HOME=/opt/jdk-19
+export PATH=$JAVA_HOME/bin:$PATH
+
 # export PATH=$PATH:$ANDROID_HOME/tools
 # Homebrew
 # Homebrew
