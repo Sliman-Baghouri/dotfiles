@@ -19,7 +19,7 @@ If you're feeling adventurous:
 1. **Clone the Repository** Fire up your terminal and let's get this show on the road:
 
    ```bash
-   git clone https://github.com/your-username/dotfiles.git ~/.dotfiles
+   git clone https://github.com/Sliman-Baghouri/dotfiles.git ~/.dotfiles
    
 2. **Create symbolic links using stow** Let's link these configurations to their rightful places. Head to .dotfiles directory and run:
    ```bash
