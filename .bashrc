@@ -37,8 +37,7 @@ PS1="\[\033[34m\]⮝ \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\
 [[ $- != *i* ]] && return
 
 # alias ls='ls --color=auto'
-alias ls='lsd'
-alias grep='grep --color=auto'
+
 alias hyprconf='nvim ~/.dotfiles/.config/hypr/hyprland.conf'
 alias downtime='~/.dotfiles/.config/scripts/downtime.sh'
 alias notes='nvim ~/notes/moonstep/apps/users/backlogs.md'

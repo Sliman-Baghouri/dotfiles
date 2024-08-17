@@ -10,9 +10,13 @@ vim.cmd("set pumblend=15")
 vim.cmd("set encoding=utf-8")
 vim.cmd("set arabicshape")
 vim.cmd("set termbidi")
+vim.cmd("set modifiable")
 vim.cmd("set guifont=JetBrainsMono\\ Nerd\\ Font\\ Mono:h10")
 vim.opt.nu = true
 vim.opt.rnu = true
+vim.opt.clipboard = 'unnamedplus'
+
+
 
 -- Enable auto indenting and set it to spaces
 vim.opt.smartindent = true
@@ -20,7 +24,6 @@ vim.opt.shiftwidth = 2
 
 -- Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
 vim.opt.breakindent = true
-
 -- Enable incremental searching
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
