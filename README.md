@@ -31,7 +31,7 @@ If you're feeling adventurous:
    paru -S waybar wofi mako xdg-desktop-portal-hyprland-git polkit-gnome pamixer
    pavucontrol brightnessctl bluez bluez-utils blueman \
    network-manager-applet btop \ pacman-contrib ttf-jetbrains-mono-nerd noto-fonts-emoji \
-   lxappearance xfce4-settings fd ripgrep wl-clipboard hyprpaper
+   lxappearance xfce4-settings fd ripgrep wl-clipboard hyprpaper pyprland
    
 (for wallpaper dont forget to add Pictures/1.png) check ~/.config/hypr/hyprpaper.conf
 
