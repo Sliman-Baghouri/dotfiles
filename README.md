@@ -21,9 +21,19 @@ If you're feeling adventurous:
    ```bash
    git clone https://github.com/Sliman-Baghouri/dotfiles.git ~/.dotfiles
    
-2. **Create symbolic links using stow** Let's link these configurations to their rightful places. Head to .dotfiles directory and run:
+2. **Create symbolic links using stow** remove/rename any file in home that conflicts with dotfiles, cd into .dotfiles directory and run:
    ```bash
    stow .
+
+3. install needed packages via paru, yay or pacman if avialable
+   
+   ```bash
+   paru -S waybar wofi mako xdg-desktop-portal-hyprland-git polkit-gnome pamixer
+   pavucontrol brightnessctl bluez bluez-utils blueman \
+   network-manager-applet btop \ pacman-contrib ttf-jetbrains-mono-nerd noto-fonts-emoji \
+   lxappearance xfce4-settings fd ripgrep wl-clipboard hyprpaper
+   
+(for wallpaper dont forget to add Pictures/1.png) check ~/.config/hypr/hyprpaper.conf
 
 That's all, folks. Thanks for stopping by.
 
