@@ -28,7 +28,7 @@ If you're feeling adventurous:
 3. install needed packages via paru, yay or pacman if avialable
    
    ```bash
-   paru -S waybar wofi mako xdg-desktop-portal-hyprland-git polkit-gnome pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet btop pacman-contrib ttf-jetbrains-mono-nerd noto-fonts-emoji lxappearance xfce4-settings fd ripgrep wl-clipboard hyprpaper pyprland
+   paru -S waybar wofi mako xdg-desktop-portal-hyprland-git polkit-gnome pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet btop pacman-contrib ttf-jetbrains-mono-nerd noto-fonts-emoji lxappearance xfce4-settings fd ripgrep wl-clipboard hyprpaper pyprland scrcpy
    
 (for wallpaper dont forget to add Pictures/1.png) check ~/.config/hypr/hyprpaper.conf
 

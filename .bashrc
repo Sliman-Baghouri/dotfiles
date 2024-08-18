@@ -38,30 +38,37 @@ PS1="\[\033[34m\]⮝ \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\
 
 # alias ls='ls --color=auto'
 
+alias bg='nvim ~/.config/hypr/hyprpaper.conf'
 alias hyprconf='nvim ~/.dotfiles/.config/hypr/hyprland.conf'
 alias downtime='~/.dotfiles/.config/scripts/downtime.sh'
 alias notes='nvim ~/notes/moonstep/apps/users/backlogs.md'
 alias vimrc='cd ~/.dotfiles/.config/nvim'
 alias rc='nvim .bashrc'
 alias grenade='~/dev/go/grenade/grenade'
-export PATH="$PATH:/path/to/flutter/bin"
 export PATH="$PATH:/home/rodya/Downloads/flutter/bin"
+export PATH="/usr/bin/flutter/bin:$PATH"
 export CHROME_EXECUTABLE="/usr/bin/chromium"
 export PATH=$PATH:"$HOME/.local/bin"
 export DENO_INSTALL="/home/rodya/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 alias vi='nvim'
-export ANDROID_HOME=$HOME/Android/Sdk
+# export ANDROID_HOME=$HOME/Android/Sdk
 export JAVA_HOME=/opt/jdk-19
 export PATH=$JAVA_HOME/bin:$PATH
+# export PATH=$PATH:$ANDRexport PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-toolsOID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 
-# export PATH=$PATH:$ANDROID_HOME/tools
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
 # Homebrew
-# Homebrew
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+# export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+# export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+# export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+# export PATH="$PATH":"$HOME/.pub-cache/bin"
 # export PATH="$HOME/.linuxbrew/bin:$PATH"
 # export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 # export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
@@ -72,3 +79,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+export JAVA_HOME=/usr/lib/jvm/jdk-19
+export JAVA_HOME=/usr/lib/jvm/jdk-19
