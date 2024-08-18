@@ -14,7 +14,7 @@ vim.cmd("set modifiable")
 vim.cmd("set guifont=JetBrainsMono\\ Nerd\\ Font\\ Mono:h10")
 vim.opt.nu = true
 vim.opt.rnu = true
-vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard = 'unnamedplus'
 
 
 

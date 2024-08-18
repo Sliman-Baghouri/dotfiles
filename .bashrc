@@ -81,3 +81,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export JAVA_HOME=/usr/lib/jvm/jdk-19
 export JAVA_HOME=/usr/lib/jvm/jdk-19
+export PATH=$PATH:/usr/lib/jvm/default/bin
