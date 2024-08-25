@@ -41,6 +41,8 @@ vim.api.nvim_set_keymap('n', '<Tab>', ':lua F.toggle_log()<CR>', { noremap = tru
 -- Assuming the function is in utils.lua (modify if it's in init.lua)
 vim.keymap.set("i", "<C-CR>", "<c-o>o")
 
+require('tag_highlight').setup()
+
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
 -- Lua
 -- vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })

@@ -82,3 +82,11 @@ export NVM_DIR="$HOME/.nvm"
 export JAVA_HOME=/usr/lib/jvm/jdk-19
 export JAVA_HOME=/usr/lib/jvm/jdk-19
 export PATH=$PATH:/usr/lib/jvm/default/bin
+
+# pnpm
+export PNPM_HOME="/home/rodya/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
