@@ -16,7 +16,7 @@ return {
       local luasnip = require("luasnip")
       require("luasnip/loaders/from_vscode").lazy_load()
 
-      vim.o.completeopt = 'menuone,noselect'
+      vim.o.completeopt = 'menu,menuone,noselect'
 
       cmp.setup({
         snippet = {
@@ -24,7 +24,6 @@ return {
             luasnip.lsp_expand(args.body)
           end,
         },
-        
         formatting = {
           format = function(entry, vim_item)
             -- fancy icons and a name of kind
@@ -77,7 +76,7 @@ return {
           ['<C-d>'] = cmp.mapping.scroll_docs(4),
           ['<CR>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
-            select = false,
+            select = true, -- This is the key change
           }),
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
