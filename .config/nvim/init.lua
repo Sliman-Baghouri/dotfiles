@@ -47,10 +47,9 @@ vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", { noremap = true, silent = true 
 -- Lua
 -- vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
 
--- vim.cmd.colorscheme("catppuccin");
 -- vim.cmd.colorscheme("alabaster")
 -- vim.cmd.colorscheme('cold')
-vim.cmd.colorscheme("cold");
+vim.cmd.colorscheme("catppuccin");
 
 -- vim.cmd.colorscheme("plan9")
 
@@ -67,7 +66,8 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
   })
 end, { desc = "toggle diagnostic" })
 
-
+vim.api.nvim_set_hl(0, "Pmenu", { bg = "#303030" })
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#4e4e4e" })
 
 vim.g.nonels_suppress_issue58 = true
 
