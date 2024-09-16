@@ -90,3 +90,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
+#
+# go
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+
