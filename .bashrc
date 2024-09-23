@@ -96,4 +96,5 @@ esac
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+export GTK_USE_PORTAL=0
 

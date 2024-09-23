@@ -70,4 +70,3 @@ vim.api.nvim_set_hl(0, "Pmenu", { bg = "#303030" })
 vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#4e4e4e" })
 
 vim.g.nonels_suppress_issue58 = true
-
