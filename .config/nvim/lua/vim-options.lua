@@ -15,7 +15,10 @@ vim.cmd("set guifont=JetBrainsMono\\ Nerd\\ Font\\ Mono:h10")
 vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.swapfile = false
--- vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard:append("unnamedplus")
+
+
+-- set clipboard+=unnamedplus
 
 
 -- Enable auto indenting and set it to spaces

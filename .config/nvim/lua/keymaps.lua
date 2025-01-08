@@ -156,7 +156,27 @@ end
 -- General keymaps
 vim.api.nvim_set_keymap("n", "<Leader>v", ":vsp<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "<Leader>q", ":q<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>q", ":q<CR>", { noremap = true, silent = true })
+
+-- Toggle the quickfix list
+vim.api.nvim_set_keymap('n', '<leader>q', [[:lua ToggleQuickfix()<CR>]], { noremap = true, silent = true })
+
+-- Function to toggle the quickfix list
+function ToggleQuickfix()
+  local qf_open = false
+  for _, win in ipairs(vim.fn.getwininfo()) do
+    if win.quickfix == 1 then
+      qf_open = true
+      break
+    end
+  end
+  if qf_open then
+    vim.cmd('cclose')
+  else
+    vim.cmd('copen')
+  end
+end
+
 
 -- Map Tab to :bnext
 -- vim.api.nvim_set_keymap("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
