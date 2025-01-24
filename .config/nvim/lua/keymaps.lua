@@ -178,6 +178,15 @@ function ToggleQuickfix()
 end
 
 
+-- Function to open the HTML file
+local function open_html_file()
+  vim.ui.open(vim.fn.expand('%'))
+end
+
+-- Keybinding to open the HTML file
+vim.keymap.set('n', '<leader>h', open_html_file, { desc = 'Open HTML file' })
+
+
 -- Map Tab to :bnext
 -- vim.api.nvim_set_keymap("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
 
