@@ -14,6 +14,7 @@ return{
     rg_glob = true,          -- Enable glob parsing
     glob_flag = "--iglob",   -- Case insensitive globs
     glob_separator = "%s%-%-", -- Separator pattern
+    cmd = "rg --vimgrep --hidden --glob '!staging/**'", -- Explicitly exclude staging/
   },
 })
   end
