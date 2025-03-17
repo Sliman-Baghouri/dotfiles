@@ -10,6 +10,11 @@ return{
             ["ctrl-q"] = "select-all+accept",
         },
     },
+  grep = {
+    rg_glob = true,          -- Enable glob parsing
+    glob_flag = "--iglob",   -- Case insensitive globs
+    glob_separator = "%s%-%-", -- Separator pattern
+  },
 })
   end
 }
