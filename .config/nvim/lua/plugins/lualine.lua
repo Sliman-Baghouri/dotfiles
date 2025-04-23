@@ -38,6 +38,7 @@ return {
       "filename",
       color = { bg = colors.blue, fg = colors.bg, gui = "bold" },
       separator = { left = "", right = "" },
+      file_status=true, newfile_status=true, path=1
     }
 
     local project_root = {
@@ -91,7 +92,6 @@ return {
           space,
           filename
         },
-          -- { "filename", file_status=true, newfile_status=true, path=1, },
       },
       inactive_sections = {
         lualine_x = { "location" },

@@ -68,7 +68,7 @@ return {
 			-- 	end,
 			--      })
 
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
