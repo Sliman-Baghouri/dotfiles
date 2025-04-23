@@ -56,6 +56,35 @@ return {
       end,
       color = { bg = colors.bg_dark, fg = colors.blue },
     }
+    local shorten_path = {
+      function()
+        local filepath = vim.fn.expand("%:p")
+        local max_len = 20 -- max length of the display string
+        if #filepath <= max_len then
+          return vim.fn.fnamemodify(filepath, ":~:.")
+        end
+
+        local parts = vim.split(filepath, "/", { plain = true })
+        local shortened = {}
+        local len = 0
+
+        -- Iterate from the end (filename) backwards
+        for i = #parts, 1, -1 do
+          local part = parts[i]
+          len = len + #part + 1
+          table.insert(shortened, 1, part)
+          if len > max_len then
+            table.insert(shortened, 1, "...")
+            break
+          end
+        end
+
+        return table.concat(shortened, "/")
+      end,
+      color = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+      separator = { left = "", right = "" },
+    }
+
     require("lualine").setup({
       options = {
         -- theme = "catppuccin",
@@ -90,7 +119,7 @@ return {
         lualine_c = {
           project_root,
           space,
-          filename
+          shorten_path
         },
       },
       inactive_sections = {
