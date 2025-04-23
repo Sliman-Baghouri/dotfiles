@@ -59,16 +59,19 @@ return {
     local shorten_path = {
       function()
         local filepath = vim.fn.expand("%:p")
-        local max_len = 20 -- max length of the display string
-        if #filepath <= max_len then
-          return vim.fn.fnamemodify(filepath, ":~:.")
-        end
+        local max_len = 20
+        local newfile = vim.bo.buflisted and vim.fn.empty(vim.fn.expand("%:p")) == 1
 
+        -- Get file status indicators
+        local modified = vim.bo.modified and " [+]" or ""
+        local readonly = (vim.bo.readonly or not vim.bo.modifiable) and " [RO]" or ""
+        local newfile_status = newfile and " [New]" or ""
+
+        -- Shorten path
         local parts = vim.split(filepath, "/", { plain = true })
         local shortened = {}
         local len = 0
 
-        -- Iterate from the end (filename) backwards
         for i = #parts, 1, -1 do
           local part = parts[i]
           len = len + #part + 1
@@ -79,13 +82,14 @@ return {
           end
         end
 
-        return table.concat(shortened, "/")
+        local final_path = table.concat(shortened, "/")
+        return final_path .. modified .. readonly .. newfile_status
       end,
       color = { bg = colors.blue, fg = colors.bg, gui = "bold" },
       separator = { left = "", right = "" },
     }
 
-    require("lualine").setup({
+      require("lualine").setup({
       options = {
         -- theme = "catppuccin",
         theme = {
