@@ -114,3 +114,5 @@ set_color(0, 'DiffDelete', { fg = '#555555', italic = false })  -- Dark gray for
 set_color(0, 'DiffText', { fg = '#000000', bg = '#bbbbbb', italic = false })  -- Contrasting diff text
 set_color(0, 'changed', { fg = '#cccccc', italic = false })  -- Light gray for changes
 
+
+

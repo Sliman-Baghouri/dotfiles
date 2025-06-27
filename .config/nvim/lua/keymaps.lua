@@ -197,5 +197,122 @@ tnoremap("<space>", "<space>")
 
 vim.api.nvim_set_keymap('n', 'md', ':MarkdownPreview<CR>', { noremap = true, silent = true })
 
+-- Neovim Lua: transform visual selection from Figma token (slashes & spaces) to camelCase
+local api = vim.api
+local fn = vim.fn
+
+local function selection_to_camelcase()
+  -- Save current mode to detect if we're in visual mode
+  local mode = api.nvim_get_mode().mode
+  
+  -- Handle potential mode issues by ensuring we process the selection correctly
+  if not (mode:sub(1,1) == 'v' or mode:sub(1,1) == 'V' or mode == '\22') then
+    print("Please select text first")
+    return
+  end
+  
+  -- Force exit from visual mode first to ensure marks are set
+  local esc = api.nvim_replace_termcodes("<Esc>", true, false, true)
+  api.nvim_feedkeys(esc, 'nx', true)
+  
+  -- A small delay to ensure Vim has updated the marks
+  vim.defer_fn(function()
+    -- Get buffer and selection range
+    local bufnr = api.nvim_get_current_buf()
+    
+    -- Get marks from visual selection
+    local s_pos = fn.getpos("'<")
+    local e_pos = fn.getpos("'>")
+    
+    if not s_pos or not e_pos then
+      print("Could not get selection bounds")
+      return
+    end
+    
+    -- Extract row and column information
+    local s_row, s_col = s_pos[2], s_pos[3]
+    local e_row, e_col = e_pos[2], e_pos[3]
+    
+    -- Normalize order
+    if s_row > e_row or (s_row == e_row and s_col > e_col) then
+      s_row, e_row = e_row, s_row
+      s_col, e_col = e_col, s_col
+    end
+    
+    -- Convert selection coordinates to zero-indexed
+    local s_c0 = math.max(0, s_col - 1)
+    local e_c0 = e_col
+    
+    -- Safety check to ensure we're within buffer bounds
+    local line_count = api.nvim_buf_line_count(bufnr)
+    if s_row > line_count or e_row > line_count then
+      print("Selection extends beyond buffer bounds")
+      return
+    end
+    
+    -- Get line lengths for bounds checking
+    local s_line = api.nvim_buf_get_lines(bufnr, s_row - 1, s_row, false)[1] or ""
+    local e_line = api.nvim_buf_get_lines(bufnr, e_row - 1, e_row, false)[1] or ""
+    
+    if s_c0 > #s_line then s_c0 = #s_line end
+    if e_c0 > #e_line then e_c0 = #e_line end
+    
+    -- Retrieve exactly selected text with proper error handling
+    local parts
+    pcall(function()
+      parts = api.nvim_buf_get_text(bufnr, s_row - 1, s_c0, e_row - 1, e_c0, {})
+    end)
+    
+    if not parts or #parts == 0 then
+      print("Failed to get selected text")
+      return
+    end
+    
+    local text = table.concat(parts, "")
+    if text == "" then
+      print("Empty selection")
+      return
+    end
+    
+    -- Build camelCase in one pass with improved handling
+    local result = ""
+    local first_segment = true
+    
+    for segment in text:gmatch("[^/]+") do
+      -- Skip empty segments
+      if segment:gsub("%s", "") ~= "" then
+        -- Process the segment: capitalize after spaces, remove spaces
+        segment = segment:gsub("%s+(%w)", function(c) return c:upper() end):gsub("%s+", "")
+        
+        if first_segment then
+          -- First segment starts with lowercase
+          if #segment > 0 then
+            result = segment:sub(1,1):lower() .. segment:sub(2)
+            first_segment = false
+          end
+        else
+          -- Following segments start with uppercase
+          if #segment > 0 then
+            result = result .. (segment:sub(1,1):upper() .. segment:sub(2))
+          end
+        end
+      end
+    end
+    
+    -- Safely replace the selection with the new text
+    pcall(function()
+      api.nvim_buf_set_text(bufnr, s_row - 1, s_c0, e_row - 1, e_c0, { result })
+    end)
+    
+    -- Position cursor at beginning of word and enter insert mode
+    pcall(function()
+      api.nvim_win_set_cursor(0, {s_row, s_c0})
+    end)
+  end, 10) -- 10ms delay should be sufficient
+end
+
+-- Map in visual mode
+vim.keymap.set('v', '<C-f>', selection_to_camelcase, { desc = "Convert Figma token to camelCase" })
 
 return keymaps
+

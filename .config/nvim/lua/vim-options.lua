@@ -33,7 +33,7 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 -- Disable text wrap
-vim.opt.wrap = false 
+vim.opt.wrap = true 
 
 
 -- etter splitting
