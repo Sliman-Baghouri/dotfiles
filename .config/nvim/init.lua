@@ -23,6 +23,19 @@ keymap("n", "<esc>", ":noh<cr>", {
 vim.wo.number = true
 
 
+-- vim.lsp.config("kotlin_lsp", {
+--   cmd = { "kotlin-lsp", "--stdio" },
+--   root_markers = { "settings.gradle", "build.gradle", ".git" },
+-- })
+--
+--
+vim.lsp.enable("kotlin_lsp")
+
+-- Create a command to manually enable kotlin LSP
+vim.api.nvim_create_user_command("KotlinLspEnable", function()
+  vim.lsp.enable("kotlin_lsp")
+end, {})
+
 
 
 -- vim.keymap.set("n", "<c-P>", function() require('fzf-lua').files({ }) end, { desc = "Fzf Files" })
@@ -43,6 +56,7 @@ vim.api.nvim_set_keymap(
 
 -- vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 -- vim.api.nvim_set_keymap('n', '<C-t>', ':Telescope neoclip<CR>', { noremap = true, silent = true })
+--
 -- vim.o.background = "light";
 -- deno
 --
@@ -90,6 +104,7 @@ vim.api.nvim_set_hl(0, "Pmenu", { bg = "#303030" })
 vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#4e4e4e" })
 
 vim.g.nonels_suppress_issue58 = true
+
 
 local set_color = vim.api.nvim_set_hl
 

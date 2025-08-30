@@ -73,7 +73,7 @@ tooltip label{
 #temperature,
 #workspaces,
 #backlight {
-    background: #1e1e2e;
+    background: #000;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
@@ -113,19 +113,19 @@ tooltip label{
 }
 
 #custom-launch_wofi {
-    color: #89b4fa;
+    color: #fff;
     margin-left: 10px;
     border-right: 0px;
 }
 
 #pulseaudio {
-    color: #89b4fa;
+    color: #fff;
     border-left: 0px;
     border-right: 0px;
 }
 
 #pulseaudio.microphone {
-    color: #cba6f7;
+    color: #fff;
     border-left: 0px;
     border-right: 0px;
 }

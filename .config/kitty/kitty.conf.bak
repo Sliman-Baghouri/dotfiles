@@ -14,22 +14,12 @@ url_style        dotted
 #Close the terminal without confirmation
 confirm_os_window_close 0
 background_opacity 1
-window_padding_width 10
-
 
 
 
 # BEGIN_KITTY_THEME
-# Adwaita darker
+# GitHub Dark High Contrast
 include current-theme.conf
 # END_KITTY_THEME
 #
 map f1 toggle_layout stack
-
-map ctrl+shift+t launch --cwd=current
-
-# Vertical split in same directory
-map ctrl+shift+enter launch --cwd=current --keep-focus --location=vsplit
-
-
-

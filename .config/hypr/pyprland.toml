@@ -12,6 +12,15 @@ position = "20% 20%"
 size = "55% 55%"
 lazy = true 
 
+[scratchpads.volume]
+animation = "fromRight"
+command = "pavucontrol"
+class = "org.pulseaudio.pavucontrol"
+size = "40% 90%"
+unfocus = "hide"
+lazy = true
+
+
 
 [scratchpads.mobile]
 command = "scrcpy"

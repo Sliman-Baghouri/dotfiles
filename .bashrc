@@ -26,11 +26,11 @@ prompt_comment() {
     cat "$MESSAGE"
 }
 
+PS1="\[\033[34m\]⮝ \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty) \[\e[1;36m\]\[\e[1;37m\] "
 # PS1="\e[00;36m\]┌─[ \e[00;37m\]\T \d \e[00;36m\]]──\e[00;31m\]>\e[00;37m\] \u\e[00;31m\]@\e[00;37m\]\h\n\e[00;36m\]|\n\e[00;36m\]└────\e[00;31m\]> \e[00;37m\]\w \e[00;31m\]\$ \e[01;37m\]"
 # PS1="\[\e[01;37m\]{ \[\e[01;34m\]\w \[\e[01;37m\]} \[\e[01;35m\]\[\$ \]\[\e[01;37m\]"
 # PS1="\[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty)\[\033[00m\]\n\w\[\e[1;31m\] \[\e[1;36m\]\[\e[1;37m\] "
 # PS1="\[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty)\n\[\033[1;33m\]  \[\e[1;37m\] \w \[\e[1;36m\]\[\e[1;37m\] "
-PS1="\[\033[34m\]⮝ \[\e[1;37m\] \w \[\e[1;36m\]\$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty) \[\e[1;36m\]\[\e[1;37m\] "
 
 # PS1="\[\033[34m\]⮝ \[\e[1;37m\] \$(parse_git_branch)\[\033[31m\]\$(parse_git_dirty) \[\e[1;36m\]>\[\e[1;37m\] "
 # If not running interactively, don't do anything
@@ -42,9 +42,9 @@ alias bg='nvim ~/.config/hypr/hyprpaper.conf'
 alias hyprconf='nvim ~/.dotfiles/.config/hypr/hyprland.conf'
 alias downtime='~/.dotfiles/.config/scripts/downtime.sh'
 alias notes='nvim ~/notes/dawrr/apps/users/backlogs.md'
+alias status='nvim ~/notes/dawrr/apps/users/status.md'
 alias vimrc='cd ~/.dotfiles/.config/nvim'
 alias rc='nvim .bashrc'
-alias grenade='~/dev/go/grenade/grenade'
 export PATH="$PATH:/home/rodya/Downloads/flutter/bin"
 export PATH="/usr/bin/flutter/bin:$PATH"
 export CHROME_EXECUTABLE="/usr/bin/chromium"
@@ -98,3 +98,11 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 export GTK_USE_PORTAL=0
 
+alias findMiss='find . -name "*.md" | while read file; do if ! grep -q -e "customSummary" "$file"; then echo "$file" >> missing_required_fields_files.txt; fi; done'
+
+alias bspwmrc='nvim ~/.config/bspwm/bspwmrc'
+
+export OPENAI_API_KEY=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
+export ANTHROPIC_API_KEY=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
+
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"

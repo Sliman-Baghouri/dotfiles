@@ -14,6 +14,7 @@ return {
 				"lua",
 				"vim",
 				"json",
+				"kotlin",
 				"http",
 				"sql",
 				"css",

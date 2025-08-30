@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="displays" version="1.0">
+  <property name="ActiveProfile" type="string" value="Default"/>
+  <property name="Notify" type="int" value="1"/>
+  <property name="AutoEnableProfiles" type="int" value="3"/>
+  <property name="Schemes" type="empty">
+    <property name="Apply" type="string" value="Default"/>
+  </property>
+  <property name="Default" type="empty">
+    <property name="eDP-1" type="string" value="Laptop">
+      <property name="EDID" type="string" value="8f90c3197c800fa474b252b7c58e73b6b1466dd1"/>
+      <property name="Active" type="bool" value="true"/>
+      <property name="Resolution" type="string" value="640x480"/>
+      <property name="RefreshRate" type="double" value="0"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Scale" type="double" value="1"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="2560"/>
+        <property name="Y" type="int" value="394"/>
+      </property>
+    </property>
+    <property name="HDMI-A-1" type="string" value="BNQ BenQ EX2710Q 96R00367019 (HDMI-A-1)">
+      <property name="EDID" type="string" value="5a45343e9fbb292406a7d3d0c9352ec1a8a1bb1e"/>
+      <property name="Active" type="bool" value="true"/>
+      <property name="Resolution" type="string" value="2560x1440"/>
+      <property name="RefreshRate" type="double" value="59.951000000000001"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Scale" type="double" value="1"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
+  </property>
+</channel>

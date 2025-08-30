@@ -1,9 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/rodya/dev/t1/moonstep
+    - /home/rodya/optmyzr-marketing-v2
+    - /home/rodya/opcc
+    - /home/rodya/optmkt
     - /home/rodya/.dotfiles
 startuppopupversion: 5
-lastversion: 0.43.1
+lastversion: 0.52.0
 customcommandshistory:
     - q
     - :q
