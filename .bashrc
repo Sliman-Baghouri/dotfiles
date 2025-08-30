@@ -102,7 +102,4 @@ alias findMiss='find . -name "*.md" | while read file; do if ! grep -q -e "custo
 
 alias bspwmrc='nvim ~/.config/bspwm/bspwmrc'
 
-export OPENAI_API_KEY=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
-export ANTHROPIC_API_KEY=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
-
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
