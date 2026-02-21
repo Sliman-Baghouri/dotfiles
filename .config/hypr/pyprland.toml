@@ -1,4 +1,5 @@
 [pyprland]
+hyprland_version = "0.53.1"
 plugins = ["scratchpads", "expose"]
 
 [expose]
@@ -27,3 +28,20 @@ command = "scrcpy"
 class = "mobile-dropdown"
 lazy = true 
 
+[scratchpads.clock]
+command = "gnome-clocks"
+class = "org.gnome.clocks"
+size = "40% 50%"
+position = "30% 20%"
+lazy = true
+unfocus = "hide"
+animation = "fromTop"
+
+[scratchpads.note]
+command = "kitty --class kitty-note -e sh -c 'nvim ~/temp.txt'"
+class = "kitty-note"
+size = "40% 40%"
+position = "30% 25%"
+lazy = true
+unfocus = "hide"
+animation = "fromTop"

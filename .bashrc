@@ -53,8 +53,8 @@ export DENO_INSTALL="/home/rodya/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 alias vi='nvim'
 # export ANDROID_HOME=$HOME/Android/Sdk
-export JAVA_HOME=/opt/jdk-19
-export PATH=$JAVA_HOME/bin:$PATH
+# export JAVA_HOME=/opt/jdk-19
+# export PATH=$JAVA_HOME/bin:$PATH
 # export PATH=$PATH:$ANDRexport PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-toolsOID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 # export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 
@@ -79,9 +79,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-export JAVA_HOME=/usr/lib/jvm/jdk-19
-export JAVA_HOME=/usr/lib/jvm/jdk-19
-export PATH=$PATH:/usr/lib/jvm/default/bin
+# export JAVA_HOME=/usr/lib/jvm/jdk-19
+# export JAVA_HOME=/usr/lib/jvm/jdk-19
+# export PATH=$PATH:/usr/lib/jvm/default/bin
+# Use JDK 17 for Android builds
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+
 
 # pnpm
 export PNPM_HOME="/home/rodya/.local/share/pnpm"
@@ -103,3 +107,18 @@ alias findMiss='find . -name "*.md" | while read file; do if ! grep -q -e "custo
 alias bspwmrc='nvim ~/.config/bspwm/bspwmrc'
 
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
+karakeep() {
+    case "$1" in
+        on)
+            (cd ~/karakeep-app && docker-compose up -d)
+            ;;
+        off)
+            (cd ~/karakeep-app && docker-compose down)
+            ;;
+        *)
+            echo "Usage: karakeep {on|off}"
+            ;;
+    esac
+}
+export NODE_OPTIONS="--dns-result-order=ipv4first"

@@ -29,12 +29,12 @@ vim.wo.number = true
 -- })
 --
 --
-vim.lsp.enable("kotlin_lsp")
+-- vim.lsp.enable("kotlin_lsp")
 
 -- Create a command to manually enable kotlin LSP
-vim.api.nvim_create_user_command("KotlinLspEnable", function()
-  vim.lsp.enable("kotlin_lsp")
-end, {})
+-- vim.api.nvim_create_user_command("KotlinLspEnable", function()
+--   vim.lsp.enable("kotlin_lsp")
+-- end, {})
 
 
 

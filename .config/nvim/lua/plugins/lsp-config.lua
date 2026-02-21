@@ -22,19 +22,47 @@ return {
 
 			local lspconfigKeymaps = require("keymaps").lsp_config
 
-			local lspconfig = require("lspconfig")
-       
+			if vim.lsp.config then
+				vim.lsp.config("*", {
+					capabilities = capabilities,
+				})
 
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.html.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-            single_file_support = true,
-			})
+				vim.lsp.config("ts_ls", {})
+				vim.lsp.config("html", {})
+				vim.lsp.config("tailwindcss", {
+					settings = {
+						tailwindCSS = {
+							classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+						},
+					},
+				})
+				vim.lsp.config("lua_ls", {
+					single_file_support = true,
+				})
+
+				vim.lsp.enable({ "ts_ls", "html", "tailwindcss", "lua_ls" })
+			else
+				local lspconfig = require("lspconfig")
+
+				lspconfig.ts_ls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.html.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.tailwindcss.setup({
+					capabilities = capabilities,
+					settings = {
+						tailwindCSS = {
+							classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+						},
+					},
+				})
+				lspconfig.lua_ls.setup({
+					capabilities = capabilities,
+					single_file_support = true,
+				})
+			end
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
