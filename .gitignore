@@ -3,6 +3,7 @@ google-chrome/
 chromium/
 gh/
 notes/
+*.tmp
 obsidian/
 .hyprland/
 github-copilot
